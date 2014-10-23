@@ -4,27 +4,33 @@ package engine;
 
 public class Field {
 	
-	String[] field = new String[2];//Initializes a length 2 array
+	String name;
+	String value;
 	
 	//Construct for field object
 	Field(String FieldName, String FieldValue) {
-		field[0] = FieldName;
-		field[1] = FieldValue;
+		this.name = FieldName;
+		this.value = FieldValue;
 	}
 	
 	//returns the field name
 	public String getFieldName() {
-		return field[0];
+		return name;
 	}
 	
 	//returns the field value
 	public String getFieldValue() {
-		return field[1];
+		return value;
 	}
 	
 	//setter that maggie yang wrote
 	public void setFieldEntry(String name, String value) {
-		field[0] = name;
-		field[1] = value;
+		this.name = name;
+		this.value = value;
 	}
+	
+	public String toString(){
+		return getFieldName() + " ; " + getFieldValue();
+	}
+	
 }
